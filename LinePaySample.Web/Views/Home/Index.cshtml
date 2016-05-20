@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<hr />
+<h3>Reserve(capture=true) => Confirm</h3>
+<form action="@Url.Action("Reserve")" method="post">
+  <input type="submit" name="name" value="Reserve(決済予約)" />
+  <input type="text" name="capture" value="True" />
+</form>
+
+<hr/>
+<h3>Reserve(capture=false) => Confirm => Capture</h3>
+<form action="@Url.Action("Reserve")" method="post">
+  <input type="submit" name="name" value="Reserve(決済予約)" />
+  <input type="text" name="capture" value="False" />
+</form>
